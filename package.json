@@ -1,0 +1,25 @@
+{
+  "name": "back-end",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon  --exec ts-node src/index.ts --env-file=.env"
+  },
+  "keywords": [],
+  "author": "joao-leal12<joaovictorleal080415@gmail.com",
+  "license": "ISC",
+  "dependencies": {
+    "-": "^0.0.1",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "save-dev": "^0.0.1-security"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "nodemon": "^3.1.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4"
+  }
+}
