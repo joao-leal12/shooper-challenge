@@ -17,6 +17,6 @@ Antes de começar, certifique-se de que você tem o [Docker](https://www.docker.
 Primeiro, clone o repositório do projeto usando o Git:
 
 ```bash
-git clone https://github.com/seu-usuario/shopper-challenge.git
+git clone https://github.com/joao-leal12/shopper-challenge.git
 cd shopper-challenge
 docker-compose up 
