@@ -1,0 +1,27 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model customers {
+  id                    String                  @id
+  recorded_measurements recorded_measurements[]
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+model recorded_measurements {
+  id               Int       @id @default(autoincrement())
+  measure_uuid     String    @unique(map: "sqlite_autoindex_recorded_measurements_1")
+  measure_datetime String
+  measure_type     String
+  has_confirmed    Int?      @default(0)
+  image_uri        String?
+  customers_uuid   String
+  measure_value    Float
+  customers        customers @relation(fields: [customers_uuid], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
